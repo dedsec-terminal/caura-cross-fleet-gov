@@ -1,0 +1,71 @@
+# Environment
+.env
+
+# OpenClaw plugin — fetched at install time, not vendored
+.openclaw/plugins/**/node_modules/
+.openclaw/plugins/**/dist/
+.openclaw/plugins/memclaw/src/
+.openclaw/plugins/memclaw/skills/
+.openclaw/plugins/memclaw/tools.json
+.openclaw/plugins/memclaw/package.json
+.openclaw/plugins/memclaw/tsconfig.json
+
+# OpenClaw plugin runtime state
+.openclaw/plugins/installs.json
+.openclaw/plugins/memclaw/install.json
+.openclaw/plugins/memclaw/.allowlist-applied
+.openclaw/plugins/memclaw/.educated
+
+# OpenClaw runtime — never commit these
+.openclaw/agents/
+.openclaw/canvas/
+.openclaw/flows/
+.openclaw/identity/
+.openclaw/logs/
+.openclaw/memory/
+.openclaw/tasks/
+.openclaw/plugin-skills/
+.openclaw/openclaw.json.bak
+.openclaw/openclaw.json.last-good
+.openclaw/openclaw.json.last-good
+.openclaw/gateway.cmd
+.openclaw/update-check.json
+.openclaw/workspace-state.json
+.openclaw/plugins/**/.env
+.openclaw/plugins/**/node_modules/
+
+# OpenClaw workspace runtime state
+agents/**/.openclaw/
+workspace-*/
+workspace/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Node
+node_modules/
+
+# SQLite databases
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Bare git clones / mirrors
+*.git/
+
+.secrets.baseline
