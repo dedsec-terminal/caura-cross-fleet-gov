@@ -40,22 +40,6 @@
 
 ---
 
-## What is OpenClaw
-
-[OpenClaw](https://github.com/openclaw/openclaw) is an open-source agent orchestration gateway. It runs locally as a daemon, registers named agents from workspace directories, and exposes them through a unified chat interface and API. Each agent has its own workspace (a directory containing identity files: `SOUL.md`, `AGENTS.md`, `IDENTITY.md`) that are injected as system context at session start, along with its own plugin bindings (MCP servers, memory backends, tools).
-
-In this repo, OpenClaw is doing three things:
-
-- **Routing:** `/agent sales-agent` targets a specific registered agent
-- **Context injection:** loads each agent's `SOUL.md` and `AGENTS.md` before the first message
-- **Plugin wiring:** registers the MemClaw MCP server so agents can call `memclaw_*` tools natively as tool calls
-
-```bash
-npm install -g openclaw@latest
-```
-
----
-
 ## What is MemClaw
 
 [MemClaw](https://github.com/caura-ai/caura-memclaw) is open-source multi-agent memory for AI agent fleets: governed, shared, and self-improving. Agents write plain text. MemClaw turns it into searchable, governed, structured memory with automatic enrichment, lifecycle management, and cross-agent knowledge sharing.
@@ -83,6 +67,22 @@ This repo is a **use-case implementation**: three OpenClaw agents (Sales, Legal,
   <a href="https://memclaw.net/docs"><strong>Documentation</strong></a> ·
   <a href="https://memclaw.net"><strong>Managed cloud (free tier available)</strong></a>
 </p>
+
+---
+
+## What is OpenClaw
+
+[OpenClaw](https://github.com/openclaw/openclaw) is an open-source agent orchestration gateway. It runs locally as a daemon, registers named agents from workspace directories, and exposes them through a unified chat interface and API. Each agent has its own workspace (a directory containing identity files: `SOUL.md`, `AGENTS.md`, `IDENTITY.md`) that are injected as system context at session start, along with its own plugin bindings (MCP servers, memory backends, tools).
+
+In this repo, OpenClaw is doing three things:
+
+- **Routing:** `/agent sales-agent` targets a specific registered agent
+- **Context injection:** loads each agent's `SOUL.md` and `AGENTS.md` before the first message
+- **Plugin wiring:** registers the MemClaw MCP server so agents can call `memclaw_*` tools natively as tool calls
+
+```bash
+npm install -g openclaw@latest
+```
 
 ---
 
