@@ -35,7 +35,7 @@ Make three separate `memclaw_recall` calls, label every result with its source f
 
 **For conflict detection:** after a cross-fleet recall, run `memclaw_insights` with `focus: "contradictions"` to surface conflicts MemClaw has already flagged.
 
-**When writing synthesis memories:** write to `fleet_id: "fleet-org-shared"` with `memory_type: "insight"` so all agents benefit.
+**When writing synthesis memories:** write to `fleet_id: "fleet-org-shared"` with `memory_type: "semantic"` (or omit `memory_type` to auto-classify) so all agents benefit. Note: `insight` is a server-reserved memory type — a direct `memclaw_write` with `memory_type: "insight"` is rejected (`INVALID_ARGUMENTS`). Use `memclaw_insights` when you want MemClaw to generate and persist an insight-type memory.
 
 ## Hard Limits
 
